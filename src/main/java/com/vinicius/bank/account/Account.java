@@ -4,15 +4,14 @@ import com.vinicius.bank.transaction.Transaction;
 import jakarta.persistence.*;
 
 import java.util.List;
-import java.util.UUID;
 
 @Entity
 @Table(name = "tb_account")
 public class Account {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     private String sortCode;
 
@@ -29,20 +28,19 @@ public class Account {
     protected Account() {
     }
 
-    public Account(String sortCode, String accountNumber, double currentBalance, String bankName, String ownerName, List<Transaction> transactions) {
-            this.sortCode = sortCode;
-            this.accountNumber = accountNumber;
-            this.currentBalance = currentBalance;
-            this.bankName = bankName;
-            this.ownerName = ownerName;
-            this.transactions = transactions;
+    public Account(String bankName, String ownerName, String generateSortCode, String generateAccountNumber, double currentBalance) {
+        this.sortCode = generateSortCode;
+        this.accountNumber = generateAccountNumber;
+        this.currentBalance = currentBalance;
+        this.bankName = bankName;
+        this.ownerName = ownerName;
     }
 
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
