@@ -1,14 +1,14 @@
-# Overview
-This project simulates a bank where it is possible to perform operations such as creating an account, checking balance, depositing, and withdrawing.
+# Visão Geral
+Este projeto simula um banco aonde é possível realizar operações de criar conta,checar saldo, saque e depósito.
 
-## Requirements
+## Requisitos
 - [Java 17](https://www.oracle.com/java/technologies/downloads/#jdk17-windows)
-- [MySQL](https://www.mysql.com/downloads/)
+- [My SQL](https://www.mysql.com/downloads/)
 - [Postman](https://www.postman.com/downloads)
 
 ## Usage
-- Start the application with Maven
-- The API is accessible at http://localhost:8080
+- Comece a aplicação com Maven
+- A API está acessível na porta http://localhost:8080
 
 ## Endpoints
 `API BANK`
@@ -23,7 +23,7 @@ PUT /account - Crie uma nova conta
   "ownerName": "Vinicius Vieira"
 }
 ```
-- Output data
+- Dados de saída
 ````json
 {
     "id": 1,
@@ -37,7 +37,7 @@ PUT /account - Crie uma nova conta
 ````
 
 ```
-POST /transaction/deposit - Deposit money
+POST /transaction/deposit - Depositar dinheiro
 ```
 
 ```json
@@ -46,13 +46,13 @@ POST /transaction/deposit - Deposit money
   "amount": 4500.00
 }
 ```
-- Output data
+- Dados de saída
 ```
 Operation completed successfully
 ```
 
 ````
-POST /account - Withdraw money
+POST /transaction/withdraw - Sacar dinheiro
 ````
 ````json
 {
@@ -61,13 +61,13 @@ POST /account - Withdraw money
   "amount": 1800
 }
 ````
-- Output data
+- Dados de saída
 ````
 Operation completed successfully
 ````
 
 ```
-POST /account - Check account balance
+POST /account - Checar o saldo da conta
 ```
 ````json
 {
@@ -75,7 +75,7 @@ POST /account - Check account balance
     "accountNumber": "91612563"
 }
 ````
-- Output data
+- Dados de saída
 ````json
 {
     "id": 1,
