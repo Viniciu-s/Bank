@@ -14,7 +14,7 @@ This project simulates a bank where it is possible to perform operations such as
 `API BANK`
 
 ```
-PUT /account - Crie uma nova conta
+PUT /account - Create a new account
 ```
 
 ```json
