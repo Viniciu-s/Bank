@@ -31,7 +31,7 @@ public class AccountController {
 
     private static final Logger logger = LoggerFactory.getLogger(AccountController.class);
 
-    @PostMapping(value = "/account",
+    @PostMapping(
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> checkAccountBalance(
@@ -55,7 +55,7 @@ public class AccountController {
         }
     }
 
-    @PutMapping(value = "/accounts",
+    @PutMapping(
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> createAccount(

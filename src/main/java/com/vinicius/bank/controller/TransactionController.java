@@ -39,7 +39,7 @@ public class TransactionController {
 
     private static final Logger logger = LoggerFactory.getLogger(TransactionController.class);
 
-    @PostMapping(value = "/transactions", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> makeTransfer(@Valid @RequestBody TransactionInput transactionInput) {
         if (InputValidator.isSearchTransactionValid(transactionInput)) {
             boolean isComplete = transactionService.makeTransfer(transactionInput);
