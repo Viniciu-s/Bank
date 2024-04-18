@@ -11,7 +11,7 @@ This project simulates a bank where it is possible to perform operations such as
 - Start the application with Maven
 - The API is accessible at http://localhost:8080
 
-##Docker 
+## Docker 
 1. Download the images:
 docker pull vieiraenabled/bank
 docker pull mysql
