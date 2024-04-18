@@ -5,10 +5,18 @@ This project simulates a bank where it is possible to perform operations such as
 - [Java 17](https://www.oracle.com/java/technologies/downloads/#jdk17-windows)
 - [MySQL](https://www.mysql.com/downloads/)
 - [Postman](https://www.postman.com/downloads)
+- [Docker](https://www.docker.com/products/docker-desktop/)
 
 ## Usage
 - Start the application with Maven
 - The API is accessible at http://localhost:8080
+
+##Docker 
+1. Download the images:
+docker pull vieiraenabled/bank
+docker pull mysql
+2. Run the docker compose up command.
+3. Access port 8080 on postman.
 
 ## Endpoints
 `API BANK`
